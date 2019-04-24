@@ -327,8 +327,9 @@ color:#00ff7f
 		<div class="container">
 		<div class="content">
 			<div class="container">
-				<header><p class="htitle">Programowanie w Internecie</p></header>
-				<div id="status"></div>
+				<header><p class="htitle">Programowanie w Internecie</p>
+						<p class="ptext"><div id="status"></div></p></header>
+				
 			</div>
 			<div class="container">
 				<div class="leftmenu">
@@ -338,13 +339,11 @@ color:#00ff7f
 						<li><a onClick="toggle('zad1a')">Lorem Ipsum</a></li>
 						<li><a onClick="toggle('zad1b')">Grafiki</a></li>
 						<li><a onClick="toggle('zad2')">Kółko i krzyżyk</a></li>
+						<li><fb:login-button 
+							scope="public_profile,email"
+							onlogin="checkLoginState();">
+							</fb:login-button></li>
 					</ul>
-					
-<fb:login-button 
-  scope="public_profile,email"
-  onlogin="checkLoginState();">
-</fb:login-button>
-
 				</div>
 				<div class="middle">
 					<div class="mid" id="ind">
