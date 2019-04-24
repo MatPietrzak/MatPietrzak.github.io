@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Pierwsza strona internetowa</title>
+<style>
+body {
+  background-color: #daebe8;
+  width:100%;
+  margin:0;
+}
+
+header {
+	width:100%;
+	float:left;
+	background-color:#667292;
+	border-radius: 0px 0px 30px 30px;
+	padding:0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+.stopka {
+	width:100%;
+	float:left;
+	background-color:#667292;
+	text-align:center;
+	border-radius: 30px 30px 30px 30px;
+	bottom:0;
+	padding:0;
+}
+.content{
+	min-height:90%;
+}
+.container {
+	box-sizing:border-box;
+	margin:0;
+	width:100%;
+	float:left;
+	text-align:center;
+}
+.leftmenu {
+	box-sizing:border-box;
+	width: 25%;
+	float:left;
+	position:sticky;
+	top:0;
+	left:0;
+	background-color:#667292;
+	border: 2px solid lightblue;
+	border-left:0;
+	border-radius: 30px 0px 20px 0px;
+	padding: 5px;
+	margin-top:0.5%;
+}
+.rightmenu {
+	box-sizing:border-box;
+	width: 25%;
+	float:right;
+	position:sticky;
+	top:0;
+	right:0;
+	background-color:#667292;
+	border: 2px solid lightblue;
+	border-radius: 0px 30px 0px 20px;
+	padding: 5px;
+	margin-top:0.5%;
+}
+.middle {
+
+	box-sizing:border-box;
+	width: 49%;
+	float:left;
+	background-color:#cfe0e8;
+	border: 2px solid lightblue;
+	border-top:0;
+	margin: 0.5%;
+	margin-top:0;
+	border-radius: 0px 0px 10px 10px;
+	padding: 15px;
+}
+.mid {
+	display:none;
+}
+#ind{
+	display:block;
+}
+div.grafika {
+  box-sizing:border-box;
+  margin:0.5%;
+  border: 1px solid lightgray;
+  border-radius:10px;
+  background-color:#cfe0e8;
+  float:left;
+  width: 49%;
+}
+
+div.grafika:hover {
+  border: 1px solid #777;
+}
+
+div.grafika img {
+  width: 95%;
+  border-radius:10px;
+  height: auto;
+}
+
+div.desc {
+  padding: 5px;
+  text-align: center;
+  color:white;
+  font-size:1.1em;
+}
+.htitle{
+	color:orange;
+	font-size:2em;
+	padding:10px;
+	margin:0;
+	
+}
+.ftitle{
+	color:orange;
+	font-size:1.5em;
+	padding:10px;
+	margin:0;
+	
+}
+.ptitle {
+	font-size:1.5em;
+	margin-top:2px;
+	margin-bottom:2px;
+	padding:0;
+	color:orange;
+	text-align:center;
+}
+.ptext {
+	color:white;
+	text-align:center;
+}
+.gra {
+	box-sizing:border-box;
+	width: 98%;
+	float:left;
+	background-color:black;
+	border: 2px solid green;
+	margin: 1%;
+	border-radius: 10px;
+	padding: 5px;
+}
+.graczmenu{
+	box-sizing:border-box;
+	width: 34%;
+	float:left;
+	background-color:black;
+	border: 2px solid green;
+	margin: 1%;
+	border-radius: 10px;
+	color:white;
+}
+.ogolnemenu{
+	box-sizing:border-box;
+	width: 70%;
+	float:left;
+	background-color:black;
+	border: 2px solid green;
+	margin-left:15%;
+	margin-right:15%;
+	border-radius: 10px;
+	color:white;
+}
+.cont1{
+	box-sizing:border-box;
+	width: 42%;
+	float:left;
+	margin:0;
+}
+.cont2{
+	box-sizing:border-box;
+	width: 48%;
+	float:left;
+	padding:0;
+	padding-top:5px;
+	margin:1%;
+}
+.button1{
+	width:100%;
+	text-align:center;
+	
+}
+.pgra{
+	font-size:1.5em;
+	margin-top:2px;
+	margin-bottom:2px;
+	padding:0;
+	color:lightgreen;
+	text-shadow:1px 1px white;
+	text-align:left;
+}
+	
+.kwadrat {
+	box-sizing:border-box;
+  width: 33%;
+  height: 134px;
+  display: block;
+  float: left;
+  border: 1px solid lightblue;
+  font-size: 7em;
+  text-align:center;
+  margin:0;
+  color:white;
+}
+.text {
+	text-align:center;
+	margin:0;
+	padding:0;
+	font-size:6.3em;
+	color:red;
+}
+.button1{
+ background-color: lightgreen; /* Green */
+  border: none;
+  border-radius:5px;
+  border: 2px solid green;
+  color: white;
+  width:100%;
+  padding: 2px 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+select {
+background-color:lightgreen;
+background-position:300px;
+width:60%;
+padding:12px;
+margin-top:1%;
+font-family:Cursive;
+line-height:1;
+border-radius:5px;
+color:white;
+font-size:1em;
+-webkit-appearance:none;
+box-shadow:inset 0 0 10px 0 rgba(0,0,0,0.6);
+outline:none
+}
+select:hover {
+color:#00ff7f
+}
+@media only screen and (max-width:900px) {
+  /* For mobile phones: */
+  .middle{
+    width:97%;
+	border-top:0;
+	border-bottom:0;
+	margin:0;
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+	border-radius: 0px 0px 0px 0px;
+  }
+  .leftmenu {
+	border-bottom:0;
+	position:relative;
+	border-radius: 30px 30px 5px 5px;
+	margin:0;
+	margin-top:0.5%;
+	width:100%;
+  }
+  .rightmenu {
+	border-top:0;
+	position:relative;
+	border-radius: 5px 5px 30px 30px;
+	margin:0;
+	margin-bottom:0.5%;
+	width:100%;
+  }
+  .pgra{
+	font-size:0.8em;
+}
+.kwadrat {
+  height: 110px;
+  font-size: 6em;
+}
+}
+</style>
+		<script>
+		function toggle(id)
+{
+	
+	var x=document.getElementsByClassName('mid');
+	for (i=0;i<x.length;i++)
+	{
+		x[i].style.display='none';
+	}
+	document.getElementById(id).style.display='block';
+	
+
+	return;
+}
+		</script>
+		<script src="tictac.js"></script>
+	</head>
+	<body>
+		<div class="container">
+		<div class="content">
+			<div class="container">
+				<header><p class="htitle">Programowanie w Internecie</p></header>
+			</div>
+			<div class="container">
+				<div class="leftmenu">
+					<p class="ptitle">Menu</p>
+					<ul>
+						<li><a onClick="toggle('ind')">Strona główna</a></li>
+						<li><a onClick="toggle('zad1a')">Lorem Ipsum</a></li>
+						<li><a onClick="toggle('zad1b')">Grafiki</a></li>
+						<li><a onClick="toggle('zad2')">Kółko i krzyżyk</a></li>
+					</ul>
+				</div>
+				<div class="middle">
+					<div class="mid" id="ind">
+						<p class="ptitle">Strona Główna</p>
+						<p class="ptext" style="font-size:1.2em">Witaj na stronie głównej!</p>
+					</div>
+					<div class="mid" id="zad1a">
+						<p class="ptitle">Lorem Ipsum</p>
+						<p class="ptext" style="font-size:1.2em"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae dui non nisi iaculis finibus quis in tortor. Duis rhoncus et orci vitae tempor. Vestibulum tincidunt convallis tristique. Curabitur blandit, ante et convallis molestie, tellus purus pellentesque ante, a auctor nibh sem sit amet erat. Etiam ultricies aliquam sem ut dignissim. Curabitur tristique lacinia facilisis. Aliquam lacus sapien, dictum et euismod ut, fermentum ut turpis. Sed eu magna magna. Fusce auctor justo elementum purus consequat, vitae mattis mauris feugiat. Suspendisse pulvinar mauris hendrerit, rhoncus leo egestas, vulputate est.
+						<br><br>
+						Morbi dapibus augue vitae venenatis finibus. Donec convallis sagittis malesuada. Sed magna ligula, sodales eget metus vulputate, volutpat condimentum lorem. Nulla sit amet pretium orci, ultrices viverra arcu. Proin vel placerat nulla, at suscipit sapien. Suspendisse eget diam risus. Praesent ac convallis sapien. Nulla vestibulum tincidunt velit, quis commodo eros tempus sit amet. Vestibulum nisi ipsum, feugiat at elit eu, aliquam varius elit. Sed interdum sed est vel faucibus. Nulla pulvinar sem mattis tortor dapibus, sed malesuada nulla faucibus.
+						<br><br>
+						Fusce quam eros, hendrerit vel lobortis vitae, malesuada at est. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras maximus enim vitae gravida blandit. Aliquam a sollicitudin odio. Mauris blandit magna sit amet ante bibendum finibus. In nec fringilla lectus. Maecenas eu odio sit amet nisi cursus bibendum quis eget leo.
+						</p>
+					</div>
+					<div class="mid" id="zad1b">
+						<p class="ptitle">Grafiki</p>
+						<p class="ptext" style="font-size:1.2em">Kilka grafik</p>
+						
+						<div class="grafika">
+							<a target="_blank" href="mw.png">
+							<img src="mw.png" alt="Droga Mleczna" width="600" height="400">
+							</a>
+							<div class="desc">Droga Mleczna</div>
+						</div>
+						<div class="grafika">
+							<a target="_blank" href="q.jpg">
+							<img src="q.jpg" alt="Kwazar" width="600" height="400">
+							</a>
+							<div class="desc">Kwazar</div>
+						</div>					
+					</div>
+					<div class="mid" id="zad2">
+						<p class="ptitle">Kółko i krzyżyk</p>
+						<div class="gra">
+							<div class="container">
+							<form>
+								<div class="graczmenu" style="margin-left:15%"><p class="pgra">Gracz O</p>
+									<p class="pgra" id="wyg1">Wygrane: 0</p>
+									<select id="ktogra1">
+									<option value="Człowiek">Człowiek</option>
+									<option value="Komputer">Komputer</option>
+									</select>
+								</div>
+								<div class="graczmenu" style="margin-right:15%"><p class="pgra">Gracz X</p>
+									<p class="pgra" id="wyg2">Wygrane: 0</p>
+									<select id="ktogra2">
+									<option value="Człowiek">Człowiek</option>
+									<option value="Komputer">Komputer</option>
+									</select>
+								</div>
+								</form>
+								<div class="ogolnemenu">
+								<div class="cont1" style="width:48%">
+								<p class="pgra" id="ruch">Ruch:</p>
+								<p class="pgra" id="rozgrywka">Rozgrywka: 0</p>
+								<p class="pgra" id="stan">Stan:</p></div>
+								<div class="cont1" style="margin-left:8%">
+									<button id="start" type="button" onclick="Game()" class="button1">Start</button>
+									<button id="reset" type="button" onclick="Reset()" class="button1">Reset</button>
+									<button id="again" type="button" onclick="Again()" class="button1" disabled>Kolejna rozgrywka</button>
+								</div>
+								</div>
+							</div>
+							<div id="1" onClick="wybierzpole(this.id)" class="kwadrat"></div>
+							<div id="2" onClick="wybierzpole(this.id)" class="kwadrat"></div>
+							<div id="3" onClick="wybierzpole(this.id)" class="kwadrat"></div>
+							<div id="4" onClick="wybierzpole(this.id)" class="kwadrat"></div>
+							<div id="5" onClick="wybierzpole(this.id)" class="kwadrat"></div>
+							<div id="6" onClick="wybierzpole(this.id)" class="kwadrat"></div>
+							<div id="7" onClick="wybierzpole(this.id)" class="kwadrat"></div>
+							<div id="8" onClick="wybierzpole(this.id)" class="kwadrat"></div>
+							<div id="9" onClick="wybierzpole(this.id)" class="kwadrat"></div>
+						</div>					
+					</div>
+				</div>
+				<div class="rightmenu"><p class="ptitle">
+					<p class="ptitle"> Walidacja</p>
+				    <a href="https://validator.w3.org/check?uri=mateuszpietrzak.xaa.pl&charset=%28detect+automatically%29&doctype=Inline&group=0"><img src="w3c.png" alt="Valid HTML 5.0" height="31" width="88" /></a>
+					<p><a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Poprawny CSS!" /></a></p>
+				</div>
+			</div>
+		</div>
+		<footer id="footer"><div class="stopka"><p class="ftitle">Stronę wykonał Mateusz Pietrzak</p></div></footer>
+		</div>
+
+	</body>
+
+</html>
