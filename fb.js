@@ -42,7 +42,7 @@ function testAPI() {
     FB.api('/me', { locale: 'pl_PL', fields: 'name, email,picture{url}' }, function (response) {
         console.log('Successful login for: ' + response.name);
         console.log(response);
-        document.getElementById('status').innerHTML ='<img src="' + response.picture.data.url + '">'+
+        document.getElementById('status').innerHTML ='<p><img src="' + response.picture.data.url + '"></p>'+
             'Zalogowany jako:' + response.name + '. Email: ' + response.email;
     });
 }
