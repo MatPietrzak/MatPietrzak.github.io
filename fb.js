@@ -43,6 +43,6 @@ function testAPI() {
         console.log('Successful login for: ' + response.name);
         console.log(response);
         document.getElementById('status').innerHTML ='<p><img src="' + response.picture.data.url + '"></p>'+
-            'Zalogowany jako:' + response.name + '. Email: ' + response.email;
+            '<p class="ptext">Zalogowany jako: ' + response.name + '.</p><p class="ptext"> Email: ' + response.email+'</p>';
     });
 }
