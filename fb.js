@@ -44,7 +44,6 @@ function testAPI() {
         console.log(response);
         document.getElementById('status').innerHTML ='<p><img src="' + response.picture.data.url + '"></p>'+
             '<p class="ptext">Zalogowany jako: ' + response.name + '.</p><p class="ptext"> Email: ' + response.email+'</p>'
-			+'<p class="ptext">id: '+response.id+'</p>'
-			+'<p class="ptext">Data urodzenia: '+response.id+'</p>';
+			+'<p class="ptext">id: '+response.id+'</p>';
     });
 }
