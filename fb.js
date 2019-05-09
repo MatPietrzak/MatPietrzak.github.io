@@ -39,10 +39,11 @@ window.fbAsyncInit = function () {
 
 function testAPI() {
     console.log('Fetching your information.... ');
-    FB.api('/me', { locale: 'pl_PL', fields: 'name, email' }, function (response) {
+    FB.api('/me', { locale: 'pl_PL', fields: 'name, email,picture{url}' }, function (response) {
         console.log('Successful login for: ' + response.name);
         console.log(response);
         document.getElementById('status').innerHTML =
-            'Zalogowany jako:' + response.name + '. Email: ' + response.email;
+            'Zalogowany jako:' + response.name + '. Email: ' + response.email +
+			'<img src="' + response.picture.data.url + '">';
     });
 }
