@@ -39,7 +39,7 @@ window.fbAsyncInit = function () {
 
 function testAPI() {
     console.log('Fetching your information.... ');
-    FB.api('/me', { locale: 'pl_PL', fields: 'name, email,picture{url},id' }, function (response) {
+    FB.api('/me', { locale: 'pl_PL', fields: 'name, email,picture{url},id,' }, function (response) {
         console.log('Successful login for: ' + response.name);
         console.log(response);
         document.getElementById('status').innerHTML ='<p><img src="' + response.picture.data.url + '"></p>'+
